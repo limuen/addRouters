@@ -96,14 +96,7 @@ export const constantRoutes = [
         meta: { title: '个人中心', icon: 'user', noCache: true }
       }
     ]
-  }
-]
-
-/**
- * asyncRoutes
- * the routes that need to be dynamically loaded based on user roles
- */
-export const asyncRoutes = [
+  },
   {
     path: '/system',
     component: Layout,
@@ -135,6 +128,45 @@ export const asyncRoutes = [
         ]
       }
     ]
+  }
+]
+
+/**
+ * asyncRoutes
+ * the routes that need to be dynamically loaded based on user roles
+ */
+export const asyncRoutes = [
+  {
+    // path: '/system',
+    // component: Layout,
+    // redirect: 'noRedirect',
+    // name: 'System',
+    // alwaysShow: true,
+    // meta: { title: '系统管理', icon: 'lock' },
+    // children: [
+    //   {
+    //     path: 'auth-manage',
+    //     name: 'AuthManage',
+    //     component: () => import('@/views/system/auth-manage'),
+    //     alwaysShow: true,
+    //     redirect: 'noRedirect',
+    //     meta: { title: '权限管理' },
+    //     children: [
+    //       {
+    //         path: 'auth',
+    //         name: 'Auth',
+    //         component: () => import('@/views/system/auth-manage/auth'),
+    //         meta: { title: '权限列表' }
+    //       },
+    //       {
+    //         path: 'role',
+    //         name: 'Role',
+    //         component: () => import('@/views/system/auth-manage/role'),
+    //         meta: { title: '角色管理' }
+    //       }
+    //     ]
+    //   }
+    // ]
   }
 
   // 404 page must be placed at the end !!!

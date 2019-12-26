@@ -161,6 +161,7 @@ export default {
       })
     },
     handleLogin() {
+      // this.$router.push('/dashboard')
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true

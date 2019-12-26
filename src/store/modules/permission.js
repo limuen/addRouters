@@ -72,7 +72,10 @@ const state = {
 const mutations = {
   SET_ROUTERS: (state, routes) => {
     state.addRoutes = routes
-    state.routes = constantRoutes.concat(routes)
+    // 动态路由
+    // state.routes = constantRoutes.concat(routes)
+    // 本地路由
+    state.routes = constantRoutes
   },
   SET_BUTTONS: (state, buttons) => {
     state.buttons = buttons
@@ -102,9 +105,13 @@ const mutations = {
 const actions = {
   generateRoutes({ commit }, { routers, buttons }) {
     return new Promise(resolve => {
-      const accessedRoutes = filterAsyncRoutes(routers).concat(errorRoutes)
+      console.log(routers)
+      // 动态路由
+      // const accessedRoutes = filterAsyncRoutes(routers).concat(errorRoutes)
+      // 静态路由
+      const accessedRoutes = constantRoutes
       commit('SET_ROUTERS', accessedRoutes)
-      commit('SET_BUTTONS', buttons)
+      // // commit('SET_BUTTONS', buttons)
       resolve(accessedRoutes)
     })
   }
