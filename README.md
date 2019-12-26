@@ -35,10 +35,10 @@ vueAddRouters是一个后台前端解决方案，它基于 [vue](https://github.
 
 ```bash
 # 克隆项目
-git clone https://github.com/bigfool-cn/vue-element-admin-simple.git
+git clone https://github.com/limuen/addRouters.git
 
 # 进入项目目录
-cd vue-element-admin-simple
+cd vue-element-admin
 
 # 安装依赖
 npm install
